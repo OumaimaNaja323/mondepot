@@ -7,17 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Étape 1 - Afficher la date et heure
-      - name: 📅 Date actuelle
-        run: echo "🕒 Date: $(date '+%d/%m/%Y %H:%M:%S')"
+      - name:  Date actuelle
+        run: date
 
       # Étape 2 - Lister les fichiers (arborescence courte)
-      - name: 📂 Fichiers du projet
+      - name:  Fichiers du projet
         run: |
-          echo "📁 Contenu du projet :"
+          echo " Contenu du projet :"
           ls -l
 
       # Étape 3 - Afficher la branche actuelle
-      - name: 🌿 Branche Git
+      - name:  Branche Git
         run: |
-          echo "🔹 Nom de la branche : ${{ github.ref_name }}"
-          echo "🔸 Commit SHA : ${{ github.sha }}"
+          echo " Nom de la branche : ${{ github.ref_name }}"
+          echo " Commit SHA : ${{ github.sha }}"
